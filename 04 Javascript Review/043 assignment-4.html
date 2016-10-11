@@ -6,17 +6,17 @@ This is Assignment 4 for Intermediate Web Design (CMP 3011). Please read the ins
 JAVASCRIPT EXERCISE
 Please perform the following exercises inside this file (unless directed otherwise), adding the task number in a comment above the completed exercise.
 
-01) Using Javascript's document.write() method, add a paragraph of lorem ipsum (get some at lipsum.com, if needed) above the bulleted list at the bottom of the page.
-02) Define a variable, myDate, and give it a value of 'today'. With document.write(), output the value of the variable on the line that says "<h2>Get involved</h2>" so that it reads "<h2>Get involved today</h2>".
-03) On the line that says "Brackets has many users!", replace "many" (just delete the word) with a JavaScript snippet that multiples 10,000 by 10,000 and divides the sum by 5 and outputs the result.
-04) Using document.getElementById(), get the text content of the element with an ID of "extension" and print that content to the JavaScript console.
-05) Set the text content of the element with an ID of "qv" to "Quicker Viewer".
-06) Create an array of seven pieces of fruit, then print the second and fifth pieces of fruit anywhere in the body of the document.
-07) Replace the contents of the <h3> tags with a function which takes one argument: the text to go into the <h3> tags. The function must also print the <h3> tags.
+/01) Using Javascript's document.write() method, add a paragraph of lorem ipsum (get some at lipsum.com, if needed) above the bulleted list at the bottom of the page.
+/02) Define a variable, myDate, and give it a value of 'today'. With document.write(), output the value of the variable on the line that says "<h2>Get involved</h2>" so that it reads "<h2>Get involved today</h2>".
+/03) On the line that says "Brackets has many users!", replace "many" (just delete the word) with a JavaScript snippet that multiples 10,000 by 10,000 and divides the sum by 5 and outputs the result.
+/04) Using document.getElementById(), get the text content of the element with an ID of "extension" and print that content to the JavaScript console.
+/05) Set the text content of the element with an ID of "qv" to "Quicker Viewer".
+/06) Create an array of seven pieces of fruit, then print the second and fifth pieces of fruit anywhere in the body of the document.
+/07) Replace the contents of the <h3> tags with a function which takes one argument: the text to go into the <h3> tags. The function must also print the <h3> tags.
 08) In the same function as #7, use a method from the string object to convert the text passed into the function to uppercase.
-09) Output the width and height of the browser window anywhere in the body of the document, labeling the dimensions accordingly. For example, "width: 1204, height: 952".
-10) Change the background color of the document to yellow. Hint: put the code above the </body> tag.
-11) Create a link that, when clicked, opens an alert dialogue box with the URL of the current webpage.
+/09) Output the width and height of the browser window anywhere in the body of the document, labeling the dimensions accordingly. For example, "width: 1204, height: 952".
+/10) Change the background color of the document to yellow. Hint: put the code above the </body> tag.
+/11) Create a link that, when clicked, opens an alert dialogue box with the URL of the current webpage.
 12) Reusing code from exercise #6, create a function to output a random piece of fruit from the fruit array. This function must live in an external file. Hint: use the Math object.
 
 OBJECTIVE
@@ -36,11 +36,29 @@ If you have any questions, please send Saul a message through Slack (http://baiz
 
 <!DOCTYPE html>
 <html>
+<button onclick="myFunction()">click me dude</button>
 <script type="text/javascript">
-    
+
     console.log('Need something else? Try an extension!') ;
 
+    function myFunction() {
+    alert("file:///Users/Renata/Desktop/LUCAD/Sophomore/Semmester%201/Advanced%20Web%20Projects/christine%20repository/04%20Javascript%20Review/043%20assignment-4.html");
+}
 </script>
+
+
+</script>
+<script type="text/javascript">
+    var myWidth = 0, myHeight = 0;
+    if( typeof( window.innerWidth ) == 'number' ) {
+        myWidth = window.innerWidth; myHeight = window.innerHeight;
+    } else if( document.documentElement && ( document.documentElement.clientWidth ||document.documentElement.clientHeight ) ) {
+        myWidth = document.documentElement.clientWidth; myHeight = document.documentElement.clientHeight;
+    } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+        myWidth = document.body.clientWidth; myHeight = document.body.clientHeight;
+    }
+</script>
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -50,11 +68,40 @@ If you have any questions, please send Saul a message through Slack (http://baiz
     </head>
 
 
-    <body>
+
+
+
+</script>
+
+<body onload="changeBackground('yellow');">
+<body onload="myName">
+<script>
+function changeBackground(yellow) {
+document.body.style.background = yellow;
+}
+
+        </script>
+        <script type="text/javascript">
+          function myName() {
+              document.write.fruit = Math.random();
+          }
+        </script>
 
         <h1>GETTING STARTED WITH BRACKETS</h1>
-        <h2>This is your guide!</h2>
 
+      </script>
+      <script type="text/javascript">
+        function myName() {
+            document.fruit = Math.random();
+        }
+      </script>
+
+        <h2>This is your guide!</h2>
+        <script type="text/javascript">
+
+        document.write('<p>' + myWidth + 'x' + myHeight + '</p>');
+
+        </script>
         <!--
             MADE WITH <3 AND JAVASCRIPT
         -->
@@ -73,6 +120,23 @@ If you have any questions, please send Saul a message through Slack (http://baiz
             when you want it.
         </p>
 
+
+
+        <script type="text/javascript">
+            var fruit = [
+              "grape",
+              "orange",
+              "apple",
+              "watermelon",
+              "peach",
+              "mango",
+              "manderin",
+            ];
+
+            document.write ("apple") ;
+            document.write (" mango") ;
+        </script>
+
         <!--
             WHAT IS BRACKETS?
         -->
@@ -89,12 +153,20 @@ If you have any questions, please send Saul a message through Slack (http://baiz
             GET STARTED WITH YOUR OWN FILES
         -->
 
-        <h3>Projects in Brackets</h3>
-        <p>
-            In order to edit your own code using Brackets, you can just open the folder containing your files.
-            Brackets treats the currently open folder as a "project"; features like Code Hints, Live Preview and
-            Quick Edit only use files within the currently open folder.
-        </p>
+
+
+    <script>
+    function myFunction() {
+        document.h3.innerHTML ="Welcome " + name + ", the " + job + ".";
+    }
+    </script>
+
+        <onload="myFunction()"><h3>Projects in Brackets</h3></onload>
+
+      <p>In order to edit your own code using Brackets, you can just open the folder containing your files.
+        Brackets treats the currently open folder as a "project"; features like Code Hints, Live Preview and
+        Quick Edit only use files within the currently open folder.</p></onload>
+
 
         <samp>
             Once you're ready to get out of this sample project and edit your own code, you can use the dropdown
@@ -108,7 +180,7 @@ If you have any questions, please send Saul a message through Slack (http://baiz
         <!--
             THE RELATIONSHIP BETWEEN HTML, CSS AND JAVASCRIPT
         -->
-        <h3>Quick Edit for CSS and JavaScript</h3>
+        <onload="myFunction()"><h3>Quick Edit for CSS and JavaScript</h3></onload>
         <p>
             No more switching between documents and losing your context. When editing HTML, use the
             <kbd>Cmd/Ctrl + E</kbd> shortcut to open a quick inline editor that displays all the related CSS.
@@ -154,7 +226,7 @@ If you have any questions, please send Saul a message through Slack (http://baiz
             browser, but lives in your editor!
         </p>
 
-        <h3>Live Highlight HTML elements and CSS rules</h3>
+        <onload="myFunction()"><h3>Live Highlight HTML elements and CSS rules</h3></onload>
         <p>
             Brackets makes it easy to see how your changes in HTML and CSS will affect the page. When your cursor
             is on a CSS rule, Brackets will highlight all affected elements in the browser. Similarly, when editing
@@ -181,7 +253,7 @@ If you have any questions, please send Saul a message through Slack (http://baiz
             to bring this functionality to all major browsers in the future.
         </p>
 
-        <h3 id="qv">Quick View</h3>
+        <onload="myFunction()"><h3><id="qv">Quicker Viewer</h3></onload>
         <p>
             For those of us who haven't yet memorized the color equivalents for HEX or RGB values, Brackets makes
             it quick and easy to see exactly what color is being used. In either CSS or HTML, simply hover over any
@@ -198,7 +270,7 @@ If you have any questions, please send Saul a message through Slack (http://baiz
             preview, place your cursor over the screenshot image included earlier in this document.
         </samp>
 
-        <h3 id="extension">Need something else? Try an extension!</h3>
+          <onload="myFunction()"><h3>Need something else? Try an extension!</h3></onload>
         <p>
             In addition to all the goodness that's built into Brackets, our large and growing community of
             extension developers has built hundreds of extensions that add useful functionality. If there's
